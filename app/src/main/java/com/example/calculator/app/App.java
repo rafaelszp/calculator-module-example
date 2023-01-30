@@ -10,7 +10,7 @@ public class App {
         Double[] operands = new Double[]{1.0,1.0,1.1};
         Calculator calc = App.factory(OperationType.fromString(type));
         var result = calc.calculate(operands);
-        System.out.printf("\n\nThe calculated value is %s",result);
+        System.out.printf("%n%nThe calculated value is %s",result);
 
     }
 
@@ -21,7 +21,7 @@ public class App {
             default:
                 break;
         }
-        throw new RuntimeException("invalid operation type");
+        throw new IllegalArgumentException("invalid operation type");
     }
     
 }
